@@ -1,0 +1,1349 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'P22 Stickley Pro Caption', sans-serif;
+  color: #00463C;
+  background-color: #DFEEDA;
+}
+
+html {
+  scroll-padding-top: 70px;
+  /* ヘッダーの高さ */
+}
+
+img {
+  vertical-align: bottom;
+  width: 100%;
+  height: auto;
+}
+
+/* 部品
+------------------------------------------ */
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+li,
+a {
+  list-style: none;
+  color: #DFEEDA;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid #00463C;
+  padding-bottom: 3px;
+}
+
+h1 {
+  color: #CBA878;
+}
+
+h2 {
+  padding: 80px 0 37.5px 0;
+  font-size: 31.5px;
+  font-weight: normal;
+}
+
+p {
+  line-height: 1.75;
+  letter-spacing: 0.35px;
+}
+
+/* ボタン
+--------------------- */
+.button {
+  background-color: #00463C;
+  border-radius: 50px;
+  border-bottom: none;
+  border: 2px solid #00463C;
+  color: #DFEEDA;
+  display: block;
+  max-width: 304px;
+  width: 100%;
+  height: 56.01px;
+  line-height: 55px;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  letter-spacing: 0.23em;
+  font-size: 17px;
+}
+
+.button-box {
+  margin: 80.47px 0 115.2px;
+}
+
+.sp {
+  display: none;
+}
+
+.start {
+  background: #00463C;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+}
+
+.start p {
+  position: fixed;
+  left: 50%;
+  top: 54%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
+  /* width: 280px; */
+}
+
+.start__img {
+  width: 179px;
+}
+
+/* header
+------------------------------------------ */
+.header-layout {
+  background-color: #00463C;
+  color: #9BCEBB;
+  padding-bottom: 79.8px;
+}
+
+header {
+  background-color: #00463C;
+  color: #9BCEBB;
+  height: 70px;
+  z-index: 100;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 46.5px 0 48.5px;
+}
+
+.logo-img {
+  width: 193.45px;
+  padding-top: 29px;
+}
+
+.logo {
+  width: 36.5px;
+}
+
+/* main-video
+--------------------- */
+.movie {
+  height: 100vh;
+  width: 93.85%;
+  position: relative;
+}
+
+.header__video {
+  text-align: right;
+  margin: 0 0 0 auto;
+  padding-top: 23.5px;
+}
+
+
+/* 縦書き
+--------------------- */
+.text-right {
+  position: fixed;
+  color: #9BCEBB;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  margin: 0 25px;
+  top: 46.01%;
+  right: 0.65%;
+  z-index: 999;
+  font-size: 13px;
+}
+
+.text-left {
+  position: fixed;
+  color: #9BCEBB;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  transform: rotate(180deg);
+  margin: 0 25px;
+  top: 46.1%;
+  left: 0.7%;
+  z-index: 999;
+  font-size: 13px;
+}
+
+.line::after {
+  content: "";
+  height: 20%;
+  border-right: 1px solid #9BCEBB;
+  background-color: #9BCEBB;
+  width: 1px;
+  color: #9BCEBB;
+  margin: 0 25px;
+  position: absolute;
+  top: 76.5%;
+  right: 20px;
+}
+
+
+/*スクロールダウン全体の場所*/
+.scrolldown {
+  position: absolute;
+  right: 2.98%;
+  top: 75%;
+  height: 50px;
+}
+
+/* 線の描写 */
+.scrolldown::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 30px;
+  background: #9BCEBB;
+  animation: pathmove 1.5s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  30% {
+    height: 200px;
+    opacity: 1;
+  }
+
+  100% {
+    height: 0;
+    top: 300px;
+    opacity: 0;
+  }
+}
+
+img {
+  width: 100px;
+}
+
+.header__list,
+.header__list__jp {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header__list__jp {
+  padding-top: 14px;
+}
+
+.header__hamburger__item {
+  margin-right: 16px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__inner {
+  justify-content: space-between;
+  display: flex;
+}
+
+.header__nav a {
+  color: #DFEEDA;
+  text-decoration: none;
+}
+
+.hamburger__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0 80px;
+}
+
+.hamburger__img {
+  width: 288px;
+}
+
+.header__hamburger {
+  display: none;
+}
+
+/* ハンバーガーメニュー
+--------------------- */
+.hamburger {
+  top: 50%;
+  right: 0;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  padding: 45px 50px 31px 16px;
+}
+
+.hamburger__span,
+.hamburger__span::before,
+.hamburger__span::after {
+  position: absolute;
+  width: 25px;
+  height: 1px;
+  background-color: #DFEEDA;
+  content: "";
+  transition: .3s;
+}
+
+.hamburger__logo__img{
+width: 150px;
+margin-left: 41px;
+}
+
+.header__hamburger__menu__a h1{
+display: flex;
+align-items: flex-start;
+}
+
+.hamburger__span {
+  position: absolute;
+  top: 36px;
+  width: 25px;
+  height: 1px;
+  background-color: #DFEEDA;
+  content: "";
+  margin-left: 4px;
+}
+
+.hamburger__span::before {
+  top: -9px;
+}
+
+.hamburger__span::after {
+  bottom: -8px;
+}
+
+.open .hamburger__span {
+  background-color: transparent;
+}
+
+.open .hamburger__span::before,
+.open .hamburger__span::after {
+  background-color: #ffffff;
+}
+
+.open .hamburger__span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.open .hamburger__span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+
+.open .hamburger-menu {
+  display: none;
+}
+
+.open .header__hamburger {
+  background-color: #00463C;
+  color: #9BCEBB;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  z-index: 20;
+}
+
+.header__hamburger__menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rooms__inner,
+.about,
+footer {
+  background-color: #00463C;
+  color: #DFEEDA;
+}
+
+.header__list__sp {
+  display: none;
+}
+
+/* main
+------------------------------------------ */
+.spend,
+.rooms__inner,
+.access__inner,
+.sns,
+.footer-address {
+  display: flex;
+}
+
+.spend {
+  gap: 125px;
+}
+
+.spend__text {
+  width: 419px;
+  padding-top: 97px;
+}
+
+.spend__text h2 {
+  font-size: 22.8px;
+}
+
+.spend__text p {
+  padding-bottom: 21.9px;
+}
+
+.spend__img {
+  width: 50%;
+  height: auto;
+  margin-top: -51px;
+  margin-bottom: 218.3px;
+}
+
+.see__img {
+  width: 100%;
+  margin-bottom: 38px;
+  height: 891px;
+  object-fit: cover;
+}
+
+.rooms__inner {
+  border-bottom: 1px solid #DFEEDA;
+  justify-content: center;
+  text-align: left;
+  padding: 25.4px 0 17px;
+}
+
+.rooms__text {
+  width: 315px;
+  letter-spacing: 2px;
+  line-height: 2;
+}
+
+.rooms__text h3 {
+  font-size: 30px;
+  padding-bottom: 5px;
+  letter-spacing: 1.7px;
+}
+
+.rooms__text p {
+  padding-bottom: 15px;
+  letter-spacing: 0.55px;
+}
+
+.rooms__img {
+  width: 390px;
+  height: 283px;
+  object-fit: cover;
+  padding: 11.5px 0 10px;
+}
+
+.rooms__arrow__img__pc {
+  width: 55px;
+}
+
+.rooms__arrow__img__sp {
+  display: none;
+  width: 55px;
+}
+
+.rooms__btn {
+  color: #DFEEDA;
+  letter-spacing: -0.5px;
+  border-bottom: 1px solid #DFEEDA;
+}
+
+.rooms__arrow {
+  display: flex;
+  border-bottom: none;
+  align-items: flex-end;
+  margin: 0 61px 0 20px;
+  height: 273px;
+}
+
+.rooms__item {
+  display: flex;
+}
+
+.arrow__bottom {
+  display: flex;
+  align-items: flex-end;
+}
+
+.glass {
+  height: 88vh;
+  background-image: url("../img/250126_umitomori_HP仮素材_3.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-bottom: 42.2px;
+}
+
+.glass__img {
+  width: 100%;
+  height: 893px;
+  object-fit: cover;
+}
+
+.information {
+  padding-top: 64.5px;
+  margin-bottom: 51.5px;
+}
+
+.information__box {
+  border-top: 1px solid #00463C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding: 17.5px 0;
+}
+
+.information__box p {
+  font-size: 15px;
+  letter-spacing: 0.15px;
+}
+
+.information__top,
+.information__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+}
+
+.information__border {
+  border-bottom: 1px solid #00463C;
+  margin-bottom: 38px;
+}
+
+.information__box .date::before {
+  content: "●";
+  padding-right: 3px;
+}
+
+.information__box .title {
+  color: #9BCEBB;
+}
+
+.arrow {
+  width: 38px;
+  margin-left: 36px;
+}
+
+.btn__wrap {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.arrow__left {
+  text-align: left;
+}
+
+.information__btn {
+  color: #00463C;
+  letter-spacing: 1.5px;
+}
+
+.information__arrow {
+  border-bottom: none;
+}
+
+.btn__right {
+  text-align: right;
+  max-width: 846px;
+}
+
+.access__inner {
+  border-top: 1px solid #00463C;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  gap: 195px;
+  text-align: left;
+  margin-bottom: 96px;
+}
+
+.access__text {
+  width: 345px;
+  padding-top: 17px;
+}
+
+.access__text h3 {
+  font-weight: normal;
+  padding-bottom: 20px;
+}
+
+.access__text p {
+  padding-bottom: 16px;
+  letter-spacing: 0.01px;
+  line-height: 1.7;
+}
+
+.access__img {
+  width: 300px;
+}
+
+.access__btn {
+  border-bottom: none;
+}
+
+.photos {
+  margin-bottom: 50px;
+  padding-top: 10px;
+}
+
+.rooms__photos {
+  background-color: #00463C;
+}
+
+.photos__box,
+.rooms__photos__box {
+  position: relative;
+  display: flex;
+}
+
+.photos__box,
+.rooms__photos__box {
+  overflow: hidden;
+}
+
+.photos__box__list,
+.rooms__photos__box__list {
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+
+.photos__box__list,
+.rooms__photos__box__list {
+  animation: photos__box__list-left 350s infinite linear 0.5s both;
+}
+
+.photos__box__list2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: photos__box__list-rl 350s infinite linear 0.5s both;
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+
+.photos__item,
+.rooms__photos__item {
+  width: calc(100vw / 2);
+}
+
+.photos__item>img {
+  width: 100%;
+  height: 536px;
+}
+
+.rooms__photos__item>img {
+  width: 100%;
+  height: 380px;
+}
+
+@keyframes photos__box__list-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes photos__box__list-rl {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.photos__btn,
+.other__btn {
+  color: #00463C;
+  letter-spacing: 1.5px;
+}
+
+.photos__padding {
+  padding-bottom: 38px;
+}
+
+.other__box {
+  border-top: 1px solid #00463C;
+  padding: 39px 0 37px 0;
+  margin-top: 8px;
+}
+
+.other {
+  margin-bottom: 134.5px;
+}
+
+
+.other__img__pc,
+.other__img__sp,
+.about__img {
+  width: 100%;
+}
+
+.other__img__sp {
+  display: none;
+}
+
+.other__box a {
+  border-bottom: none;
+}
+
+.btn__left {
+  align-items: flex-end;
+  display: flex;
+  margin-left: 30px;
+  justify-content: flex-start
+}
+
+.about {
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 25px 92px 20px;
+}
+
+.about__logo {
+  width: 76px;
+}
+
+.about h2 {
+  padding: 50px 0 56px 0;
+  font-size: 22.5px;
+  letter-spacing: 0.1px;
+}
+
+.about__wrap {
+  max-width: 567px;
+  margin: 0 auto;
+}
+
+.about__box dl {
+  max-width: 500px;
+  margin-bottom: 100px;
+}
+
+.about__box dt {
+  padding-top: 40px;
+  padding-bottom: 17.5px;
+  text-align: left;
+  font-size: 16px;
+  display: block;
+  width: 300px;
+  letter-spacing: 1.8px;
+}
+
+.about__box dt::before {
+  content: "-";
+  padding-right: 3px;
+}
+
+.about__box dd::before {
+  content: "・";
+  padding-right: 3px;
+  line-height: 1.8;
+}
+
+.about__box dd {
+  text-align: left;
+  color: #668B7E;
+  text-indent: -1em;
+  padding-left: 6px;
+}
+
+.about__img {
+  display: flex;
+  padding-top: 50px;
+  background-color: #00463C;
+}
+
+.about__img img {
+  width: 100%;
+}
+
+/* rooms Page
+------------------------------------------ */
+.rooms__item {
+  border: none;
+  margin: 0 auto;
+  padding: 0 0 20px 0;
+}
+
+.rooms__photos{
+  margin: 10px 0 20px;
+}
+
+
+.rooms__text__page h3{
+  font-size: 22px;
+}
+.rooms__arrow__wrap {
+  display: flex;
+  text-align: left;
+  align-items: flex-end;
+  max-width: 653px;
+  margin: 0 50px;
+}
+
+.rooms__arrow__right {
+  text-align: right;
+  width: 500px;
+}
+
+.rooms__item__link {
+  border-bottom: none;
+}
+
+.rooms__item__img {
+  width: 42px;
+  margin-bottom: 49px;
+}
+
+/* other Page
+------------------------------------------ */
+.header-layout-other {
+  padding-top: 100px;
+}
+
+.other__all {
+  margin-bottom: 45px;
+}
+
+.all__h2 {
+  padding-bottom: 50px;
+}
+
+.all-arrow {
+  border-bottom: none;
+  text-align: left;
+}
+
+.arrow__all {
+  width: 60px;
+}
+
+/* footer
+------------------------------------------ */
+
+footer {
+  background-color: #00463C;
+  color: #E0ECDB;
+  text-align: left;
+  height: 296px;
+  padding-top: 61px;
+}
+
+.footer__name {
+  display: none;
+}
+
+.footer__logo {
+  width: 40px;
+}
+
+.icon {
+  width: 25px;
+}
+
+.language a {
+  border-bottom: none;
+}
+
+.language {
+  padding-right: 53px;
+  gap: 1px;
+  display: flex;
+}
+
+.sns {
+  padding-left: 52px;
+  gap: 20px;
+}
+
+.sns a {
+  border-bottom: none;
+}
+
+.language__link {
+  padding-left: 20px;
+}
+
+.footer-address {
+  padding-left: 52px;
+  gap: 81px;
+}
+
+.footer-address-en {
+  padding-bottom: 53px;
+}
+
+.footer-address-en p {
+  line-height: 1.59;
+  letter-spacing: -0.85px;
+}
+
+.footer-address-jp p {
+  font-size: 12px;
+  line-height: 1.95;
+  letter-spacing: 1.15px;
+}
+}
+
+.google {
+  border-bottom: 1px solid #DFEEDA;
+  padding-bottom: 3px;
+}
+
+.footer-address-jp-access {
+  margin-bottom: 18px;
+}
+
+.footer__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyright__pc {
+  color: #668B7E;
+  font-size: 13.7px;
+  padding-left: 8px;
+  padding-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+.footer__copyright__sp {
+  display: none;
+}
+
+/* SP表示
+------------------------------------------ */
+@media (max-width: 930px) {
+  h2 {
+    padding: 52px 0 23.5px 0;
+    font-size: 28px;
+  }
+
+  .rooms__text h3 {
+    font-size: 26.5px;
+    padding-bottom: 0px;
+    letter-spacing: -1.5px;
+
+  }
+
+  p {
+    letter-spacing: 0.6px;
+  }
+
+  .sp {
+    display: block;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .start__img {
+    width: 200px;
+  }
+
+  header {
+    height: 55px;
+    padding: 0 24px;
+  }
+
+  .logo-img {
+    width: 119.45px;
+    padding-top: 15px;
+  }
+
+  .header-layout {
+    padding-bottom: 70px;
+  }
+
+  .header__list,
+  .logo {
+    display: none;
+  }
+
+  .hamburger {
+    height: 55px;
+    padding: 0px;
+  }
+
+  .header__nav {
+    gap: 0;
+  }
+
+  .hamburger__span {
+    top: 28px;
+  }
+
+  .header__hamburger__menu img {
+    padding-left: 10px;
+    width: 180px;
+  }
+
+  .header__list__sp {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 1px solid #9BCEBB;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .header__list__sp dt {
+    width: 70%;
+    border-top: 1px solid #9BCEBB;
+    padding: 15px 0 15px 10px;
+  }
+
+  .header__list__sp dd {
+    width: 30%;
+    border-top: 1px solid #9BCEBB;
+    padding: 15px 10px 15px 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .open .header__hamburger {
+    padding: 0;
+  }
+
+  .header__video {
+    padding-top: 0px;
+  }
+
+  .movie {
+    width: 100%;
+    height: 642px;
+  }
+
+  .text-left,
+  .text-right {
+    display: none;
+  }
+
+  .spend,
+  .rooms__inner,
+  .access__inner,
+  .rooms__photos__box__list,
+  .information__box,
+  .footer-address {
+    flex-direction: column;
+  }
+
+  .spend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 86px;
+
+  }
+
+  .spend__text {
+    width: 317px;
+    padding-top: 40px;
+  }
+
+  .spend h2 {
+    padding: 0px 0 30px 0;
+  }
+
+  .spend__img {
+    width: 100%;
+    margin-bottom: -15px;
+    height: 400px;
+  }
+
+  .see__img {
+    display: none;
+  }
+
+  .rooms__item,
+  .rooms__photos__box {
+    background-color: #DFEEDA;
+    color: #00463C;
+  }
+
+  .rooms__item {
+    justify-content: space-between;
+    padding: 11px 0 4.2px 0;
+  }
+
+  .rooms__img,
+  .rooms__photos__img {
+    width: 100%;
+    height: 288px;
+  }
+
+  .rooms__inner {
+    background-color: #DFEEDA;
+    color: #00463C;
+    border-top: 1px solid #00463C;
+    padding: 0 0 5px 0;
+  }
+
+  .rooms__text {
+    padding: 0 0 0 20px;
+  }
+
+  .rooms__text p {
+    padding-bottom: 0px;
+    letter-spacing: 0.55px;
+    line-height: 1.5;
+  }
+
+  .rooms__arrow {
+    align-items: self-start;
+    margin: 19px 22px 0 0px;
+    height: 0px;
+  }
+
+  .rooms__arrow__img__pc {
+    display: none;
+  }
+
+  .rooms__arrow__img__sp {
+    display: inline-block;
+    width: 28px;
+  }
+
+  .rooms__btn {
+    display: none;
+  }
+
+  .button-box {
+    margin: 26.47px 0 42.2px;
+  }
+
+  .button {
+    background-color: #00463C;
+    border-radius: 50px;
+    border-bottom: none;
+    border: 2px solid #00463C;
+    color: #DFEEDA;
+    display: block;
+    max-width: 230px;
+    width: 100%;
+    height: 43.01px;
+    line-height: 42px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    letter-spacing: 0.01em;
+    font-size: 17px;
+  }
+
+  .glass {
+    display: none;
+  }
+
+  .information {
+    padding-top: 0px;
+    margin-bottom: 46.5px;
+  }
+
+  .information__box {
+    padding: 14px 20px 13px;
+    text-align: left;
+    gap: 14px;
+    align-items: self-start;
+  }
+
+  .information__box p {
+    letter-spacing: -0.35px;
+    line-height: 1.44;
+  }
+
+  .information__btn {
+    margin-right: 22px;
+  }
+
+  .information__border {
+    margin-bottom: 19px;
+  }
+
+  .arrow {
+    width: 28px;
+    padding-top: 16px;
+    margin-right: 3px;
+  }
+
+  .photos__item,
+  .rooms__photos__item {
+    width: calc(100vw / 1);
+  }
+
+  .photos__btn,
+  .other__btn {
+    margin-right: 23px;
+  }
+
+  .access__inner {
+    gap: 16px;
+    padding-top: 16.5px;
+  }
+
+  .access__img {
+    width: 100%;
+    height: 266px;
+  }
+
+  .access__inner {
+    margin-bottom: 38px;
+  }
+
+  .photos {
+    padding-top: 60px;
+    margin-bottom: 45px;
+  }
+
+  .photos__item>img {
+    height: 267px;
+  }
+
+  .other__box {
+    padding: 21px 0 28px 0;
+  }
+
+  .other__img__pc {
+    display: none;
+  }
+
+  .other__img__sp {
+    display: inline-block;
+    height: 275px;
+  }
+
+  .other {
+    margin-bottom: 66.9px;
+  }
+
+  .about {
+    padding: 57px 21px 58px 24px;
+  }
+
+  .about__logo {
+    width: 58px;
+  }
+
+  .about h2 {
+    letter-spacing: -1.9px;
+    padding: 51px 0 29px 0;
+  }
+
+  .about__box dt {
+    letter-spacing: 1px;
+    padding-top: 39px;
+    line-height: 0.9;
+  }
+
+  footer {
+    height: 431px;
+  }
+
+  .footer__logo {
+    width: 39px;
+  }
+
+  .footer-address {
+    padding-left: 25px;
+  }
+
+  .footer-address-en {
+    padding-bottom: 24px;
+  }
+
+  .footer-address-en p {
+    letter-spacing: -0.25px;
+  }
+
+  .footer-address-jp p {
+    letter-spacing: 1.6px;
+  }
+
+  .footer__name {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+  }
+
+  .footer-address {
+    gap: 0px;
+  }
+
+
+  .sns {
+    padding-left: 25px;
+    gap: 19px;
+  }
+
+  .language {
+    padding-right: 26px;
+    padding-top: 9px;
+  }
+
+  .language__link {
+    padding-left: 23px;
+  }
+
+  .footer__item {
+    margin-top: 45px;
+    margin-bottom: 25px;
+  }
+
+  .footer__copyright__pc {
+    display: none;
+  }
+
+  .footer__copyright__sp {
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+  }
+
+
+}
