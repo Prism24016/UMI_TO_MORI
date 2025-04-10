@@ -1052,7 +1052,7 @@ footer {
   }
 
   .header-layout {
-    padding-bottom: 70px;
+    padding-bottom: 69.5px;
   }
 
   .header__list,
@@ -1149,7 +1149,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 86px;
+    gap: 81px;
 
   }
 
@@ -1158,13 +1158,17 @@ footer {
     padding-top: 40px;
   }
 
+  .spend__text p {
+    padding-bottom: 23.9px;
+}
+
   .spend h2 {
     padding: 0px 0 30px 0;
   }
 
   .spend__img {
     width: 100%;
-    margin-bottom: -15px;
+    margin-bottom: -15.5px;
     height: 400px;
   }
 
@@ -1186,7 +1190,7 @@ footer {
   .rooms__img,
   .rooms__photos__img {
     width: 100%;
-    height: 288px;
+    height: 288.1px;
   }
 
   .rooms__inner {
@@ -1256,15 +1260,19 @@ footer {
     margin-bottom: 46.5px;
   }
 
+.information h2{
+  letter-spacing: -1.1px;
+}
+
   .information__box {
-    padding: 14px 20px 13px;
+    padding: 14px 20px 9px;
     text-align: left;
     gap: 14px;
     align-items: self-start;
   }
 
   .information__box p {
-    letter-spacing: -0.35px;
+    letter-spacing: -0.4px;
     line-height: 1.44;
   }
 
@@ -1273,7 +1281,7 @@ footer {
   }
 
   .information__border {
-    margin-bottom: 19px;
+    margin-bottom: 30px;
   }
 
   .arrow {
@@ -1295,24 +1303,27 @@ footer {
   .access__inner {
     gap: 16px;
     padding-top: 16.5px;
+    margin-bottom: -18.5px;
   }
+
+  .access__text p {
+    padding: 0 0 17px 8px;
+    letter-spacing: -0.1px;
+    line-height: 1.65;
+
 
   .access__img {
     width: 100%;
     height: 266px;
   }
 
-  .access__inner {
-    margin-bottom: 38px;
-  }
-
   .photos {
-    padding-top: 60px;
+    padding-top: 58px;
     margin-bottom: 45px;
   }
 
   .photos__item>img {
-    height: 267px;
+    height: 267.5px;
   }
 
   .other__box {
