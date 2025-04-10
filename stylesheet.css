@@ -502,7 +502,7 @@ footer {
 }
 
 .glass {
-  height: 88vh;
+  height: 696px;
   background-image: url("../img/250126_umitomori_HP仮素材_3.png");
   background-size: cover;
   background-position: center;
@@ -928,7 +928,6 @@ footer {
   line-height: 1.95;
   letter-spacing: 1.15px;
 }
-}
 
 .google {
   border-bottom: 1px solid #DFEEDA;
@@ -955,6 +954,10 @@ footer {
 
 .footer__copyright__sp {
   display: none;
+}
+
+.google{
+  border-bottom: 1px solid #9BCEBB;
 }
 
 /* SP表示
@@ -985,7 +988,7 @@ footer {
   }
 
   .start__img {
-    width: 200px;
+    width: 168px;
   }
 
   header {
@@ -1031,19 +1034,20 @@ footer {
     width: 100%;
     border-bottom: 1px solid #9BCEBB;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 49px;
   }
 
   .header__list__sp dt {
     width: 70%;
     border-top: 1px solid #9BCEBB;
-    padding: 15px 0 15px 10px;
+    padding: 19px 0 10px 23px;
+    letter-spacing: 4.2px;
   }
 
   .header__list__sp dd {
     width: 30%;
     border-top: 1px solid #9BCEBB;
-    padding: 15px 10px 15px 0;
+    padding: 19px 23px 10px 0;
     display: flex;
     justify-content: flex-end;
   }
