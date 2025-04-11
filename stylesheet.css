@@ -537,19 +537,19 @@ footer {
 
 .glass {
   height: 696px;
-  background-image: url("../img/250126_umitomori_HP仮素材_3.png");
+  background-image: url("../img/umitomori_HP_3.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  margin-bottom: 167.2px;
-  transform: translateY(-102.162px);
+  /* transform: translateY(-102.162px); */
 }
 
+/*
 .glass__img {
   width: 100%;
   height: 890px;
   object-fit: cover;
-}
+} */
 
 .information {
   padding-top: 66.5px;
@@ -876,7 +876,7 @@ footer {
 
 .rooms__photos__item>img {
   width: 100%;
-  height: 426px;
+  /* height: 426px; */
 }
 
 .rooms__text__page h3 {
@@ -1171,7 +1171,7 @@ footer {
 
   .movie {
     width: 100%;
-    height: 586px;
+    /* height: 586px; */
   }
 
   .text-left,
@@ -1180,6 +1180,7 @@ footer {
   }
 
   .spend,
+  .rooms__inner,
   .access__inner,
   .rooms__photos__inner__list,
   .information__box,
@@ -1192,7 +1193,6 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 80px;
-
   }
 
   .spend__text {
@@ -1271,7 +1271,7 @@ footer {
     padding: 23px 0 15px;
   }
 
-  .rooms__border{
+  .rooms__border {
     border-bottom: 1px solid #00463C;
     position: absolute;
     top: 150px;
@@ -1284,10 +1284,13 @@ footer {
 
   .rooms__text h3 {
     font-size: 26.5px;
-    padding-top: 53px;
-    padding-bottom: 23px;
     margin-bottom: 20px;
     letter-spacing: -1.5px;
+  }
+
+  .rooms__text__width__center h3 {
+    padding-top: 53px;
+    padding-bottom: 23px;
   }
 
   .rooms__text__left {
