@@ -296,9 +296,10 @@ img {
 
 .hamburger__image {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  padding: 191px 0 107px;
+  height: 450px;
+  margin-bottom: 50px;
 }
 
 .hamburger__img {
