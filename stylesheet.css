@@ -840,7 +840,7 @@ footer {
 .rooms__lower {
   border: none;
   margin: 0 auto;
-  padding: 33px 0 28.5px 0;
+  padding: 103px 0 28.5px 0;
 }
 
 .rooms__photos__item>img {
@@ -880,7 +880,7 @@ footer {
 }
 
 .information__title {
-  padding: 50px 0 40px;
+  padding: 120px 0 39px;
 }
 
 .arrow__bottom {
@@ -906,7 +906,7 @@ footer {
 
 .all__h2 {
   padding-bottom: 50px;
-  padding-top: 67px;
+  padding-top: 137px;
 }
 
 .all-arrow {
@@ -1343,8 +1343,6 @@ footer {
   .photos__item>img {
     height: 267.5px;
   }
-
-}
 
 .other__box {
   padding: 21.5px 0 28.5px 0;
