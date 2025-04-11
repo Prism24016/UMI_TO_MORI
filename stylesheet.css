@@ -37,7 +37,7 @@ a {
 
 a {
   text-decoration: none;
-  border-bottom: 1px solid #00463C;
+  border-bottom: 2px solid #00463C;
   padding-bottom: 3px;
 }
 
@@ -110,12 +110,6 @@ p {
 
 /* header
 ------------------------------------------ */
-.header-layout {
-  background-color: #00463C;
-  color: #9BCEBB;
-  /* padding-bottom: 94px; */
-}
-
 header {
   background-color: #00463C;
   color: #9BCEBB;
@@ -151,6 +145,8 @@ header {
   margin: 0 0 0 auto;
   padding-top: 112px;
   padding-bottom: 166px;
+  background-color: #00463C;
+  color: #9BCEBB;
 }
 
 
@@ -200,7 +196,7 @@ header {
 .line::after {
   content: "";
   height: 20%;
-  border-right: 1px solid #9BCEBB;
+  border-right: 2px solid #9BCEBB;
   background-color: #9BCEBB;
   width: 1px;
   color: #9BCEBB;
@@ -477,7 +473,7 @@ footer {
 }
 
 .rooms__inner {
-  border-bottom: 1px solid #DFEEDA;
+  border-bottom: 2px solid #DFEEDA;
   justify-content: center;
   text-align: left;
   padding: 25.4px 0 26.5px;
@@ -519,15 +515,15 @@ footer {
 .rooms__btn {
   color: #DFEEDA;
   letter-spacing: -0.5px;
-  border-bottom: 1px solid #DFEEDA;
+  border-bottom: 2px solid #DFEEDA;
 }
 
 .rooms__arrow {
   display: flex;
   border-bottom: none;
   align-items: flex-end;
-  margin: 0 61px 0 20px;
-  height: 273px;
+  margin: 227px 61px 0 20px;
+  /* height: 273px; */
 }
 
 .rooms__item {
@@ -546,6 +542,7 @@ footer {
   background-position: center;
   background-attachment: fixed;
   margin-bottom: 167.2px;
+  transform: translateY(-102.162px);
 }
 
 .glass__img {
@@ -555,12 +552,12 @@ footer {
 }
 
 .information {
-  padding-top: 64.5px;
+  padding-top: 66.5px;
   margin-bottom: 51.5px;
 }
 
 .information__box {
-  border-top: 1px solid #00463C;
+  border-top: 2px solid #00463C;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -582,7 +579,7 @@ footer {
 }
 
 .information__border {
-  border-bottom: 1px solid #00463C;
+  border-bottom: 2px solid #00463C;
   margin-bottom: 38px;
 }
 
@@ -624,7 +621,7 @@ footer {
 }
 
 .access__inner {
-  border-top: 1px solid #00463C;
+  border-top: 2px solid #00463C;
   justify-content: center;
   align-items: center;
   padding-top: 80px;
@@ -666,26 +663,22 @@ footer {
   background-color: #00463C;
 }
 
-.photos__box,
-.rooms__photos__box {
+.photos__box {
   position: relative;
   display: flex;
 }
 
-.photos__box,
-.rooms__photos__box {
+.photos__box {
   overflow: hidden;
 }
 
-.photos__box__list,
-.rooms__photos__box__list {
+.photos__box__list {
   display: flex;
   list-style: none;
   padding: 0
 }
 
-.photos__box__list,
-.rooms__photos__box__list {
+.photos__box__list {
   animation: photos__box__list-left 350s infinite linear 0.5s both;
 }
 
@@ -696,17 +689,45 @@ footer {
   animation: photos__box__list-rl 350s infinite linear 0.5s both;
   display: flex;
   list-style: none;
-  padding: 0
+  padding: 0;
 }
 
-.photos__item,
-.rooms__photos__item {
+.photos__item {
   width: calc(100vw / 2);
 }
 
 .photos__item>img {
   width: 100%;
-  height: 534.5px;
+  /* height: 534.5px; */
+}
+
+/* PC表示
+------------------------------------------ */
+@media (min-width: 950px) {
+
+  .rooms__photos__box {
+    position: relative;
+    display: flex;
+  }
+
+  .rooms__photos__box {
+    overflow: hidden;
+  }
+
+  .rooms__photos__box__list {
+    animation: photos__box__list-left 350s infinite linear 0.5s both;
+  }
+
+  .rooms__photos__box__list,
+  .rooms__photos__inner__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+
+  .rooms__photos__item {
+    width: calc(100vw / 2);
+  }
 }
 
 @keyframes photos__box__list-left {
@@ -741,7 +762,7 @@ footer {
 }
 
 .other__box {
-  border-top: 1px solid #00463C;
+  border-top: 2px solid #00463C;
   padding: 37.5px 0 34.5px 0;
   margin-top: 8px;
 }
@@ -905,7 +926,7 @@ footer {
 }
 
 .other__box__page {
-  border-top: 1px solid #00463C;
+  border-top: 2px solid #00463C;
   padding: 37.5px 0 34.5px 0;
   margin-top: -2px;
 }
@@ -1001,7 +1022,7 @@ footer {
 }
 
 .google {
-  border-bottom: 1px solid #DFEEDA;
+  border-bottom: 2px solid #DFEEDA;
   padding-bottom: 3px;
 }
 
@@ -1028,7 +1049,7 @@ footer {
 }
 
 .google {
-  border-bottom: 1px solid #9BCEBB;
+  border-bottom: 2px solid #9BCEBB;
 }
 
 /* SP表示
@@ -1057,17 +1078,13 @@ footer {
 
   header {
     height: 55px;
-    padding: 0 24px;
+    padding: 0 2px 1px 24px;
   }
 
   .logo-img,
   .header__hamburger__menu img {
     width: 119.45px;
     padding-top: 15px;
-  }
-
-  .header-layout {
-    padding-bottom: 51px;
   }
 
   .header__list,
@@ -1101,20 +1118,20 @@ footer {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    border-bottom: 1px solid #9BCEBB;
+    border-bottom: 2px solid #9BCEBB;
     justify-content: space-between;
     margin-bottom: 44px;
   }
 
   .header__list__sp dt {
-    border-top: 1px solid #9BCEBB;
+    border-top: 2px solid #9BCEBB;
     letter-spacing: 4.2px;
     width: 70%;
   }
 
   .header__list__sp dt a {
     display: inline-block;
-    padding: 16px 0 14px 23px;
+    padding: 14px 0 14px 23px;
     width: 100%;
     letter-spacing: 1.7px;
     font-size: 18px;
@@ -1122,7 +1139,7 @@ footer {
 
   .header__list__sp dd {
     width: 30%;
-    border-top: 1px solid #9BCEBB;
+    border-top: 2px solid #9BCEBB;
     display: flex;
     justify-content: flex-end;
   }
@@ -1144,12 +1161,17 @@ footer {
   }
 
   .header__video {
-    padding-top: 0px;
+    padding-top: 40px;
+    padding-bottom: 86px;
+  }
+
+  .hamburger__footer {
+    position: static;
   }
 
   .movie {
     width: 100%;
-    height: 642px;
+    height: 586px;
   }
 
   .text-left,
@@ -1158,9 +1180,8 @@ footer {
   }
 
   .spend,
-  .rooms__inner,
   .access__inner,
-  .rooms__photos__box__list,
+  .rooms__photos__inner__list,
   .information__box,
   .footer-address {
     flex-direction: column;
@@ -1170,7 +1191,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 81px;
+    gap: 80px;
 
   }
 
@@ -1197,10 +1218,18 @@ footer {
     display: none;
   }
 
+  .rooms__img {
+    padding: 11.5px 0 10px;
+  }
+
   .rooms__item,
   .rooms__photos__box {
     background-color: #DFEEDA;
     color: #00463C;
+  }
+
+  .rooms__photos__box {
+    padding-top: 35px;
   }
 
   .rooms__item {
@@ -1208,35 +1237,72 @@ footer {
     padding: 11px 0 4.2px 0;
   }
 
+
   .rooms__img,
   .rooms__photos__img {
     width: 100%;
-    height: 288.1px;
+    height: 287px;
+  }
+
+  .rooms__photos__item>img {
+    max-width: 100%;
+    height: 265px;
   }
 
   .rooms__inner {
     background-color: #DFEEDA;
     color: #00463C;
-    border-top: 1px solid #00463C;
+    border-top: 2px solid #00463C;
     padding: 0 0 5px 0;
   }
 
+  .rooms__text__width__center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+
   .rooms__text {
-    padding: 0 0 0 20px;
+    padding: 0 0 0 25px;
   }
 
   .rooms__text__width {
-    padding: 23px 0 52px;
+    padding: 23px 0 15px;
+  }
+
+  .rooms__border{
+    border-bottom: 1px solid #00463C;
+    position: absolute;
+    top: 150px;
+    width: 100%;
+  }
+
+  .rooms__text__width__center {
+    text-align: center;
   }
 
   .rooms__text h3 {
     font-size: 26.5px;
-    padding-bottom: 43px;
+    padding-top: 53px;
+    padding-bottom: 23px;
+    margin-bottom: 20px;
     letter-spacing: -1.5px;
   }
 
   .rooms__text__left {
     text-align: left;
+  }
+
+  .rooms__photos__box__list {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .rooms__photos__item1>img {
+    padding-bottom: 31px;
+    width: 295px;
   }
 
   .rooms__text p {
@@ -1260,12 +1326,25 @@ footer {
     width: 28px;
   }
 
+  .arrow__left__rooms {
+    margin-bottom: 42px;
+  }
+
   .rooms__btn {
     display: none;
   }
 
+  .rooms__photos__inner__list {
+    margin: 0 auto;
+  }
+
+  .rooms__photos__item {
+    max-width: 100%;
+    padding-bottom: 6px;
+  }
+
   .button-box {
-    margin: 25.47px 0 42.2px;
+    margin: 24.47px 0 42.2px;
   }
 
   .button {
@@ -1290,6 +1369,14 @@ footer {
     display: none;
   }
 
+  .information__title {
+    padding: 88px 0 31px;
+  }
+
+  .information-text {
+    letter-spacing: -0.37px;
+  }
+
   .information {
     padding-top: 0px;
     margin-bottom: 46.5px;
@@ -1300,7 +1387,7 @@ footer {
   }
 
   .information__box {
-    padding: 14px 20px 9px;
+    padding: 11px 23.5px 13.5px;
     text-align: left;
     gap: 14px;
     align-items: self-start;
@@ -1316,17 +1403,26 @@ footer {
   }
 
   .information__border {
-    margin-bottom: 30px;
+    margin-bottom: 23px;
+  }
+
+  .information__inner {
+    margin-bottom: 44px;
+  }
+
+  .arrow__bottom {
+    width: 26px;
+    margin-left: 25px;
   }
 
   .arrow {
     width: 28px;
     padding-top: 16px;
     margin-right: 3px;
+    margin-left: 0px;
   }
 
-  .photos__item,
-  .rooms__photos__item {
+  .photos__item {
     width: calc(100vw / 1);
   }
 
@@ -1337,8 +1433,8 @@ footer {
 
   .access__inner {
     gap: 16px;
-    padding-top: 16.5px;
-    margin-bottom: 42.5px;
+    padding-top: 15.5px;
+    margin-bottom: 40.5px;
   }
 
   .access__text p {
@@ -1352,8 +1448,12 @@ footer {
     height: 266px;
   }
 
+  .photos__padding {
+    padding-bottom: 35px;
+  }
+
   .photos {
-    padding-top: 58px;
+    padding-top: 60px;
     margin-bottom: 45px;
   }
 
@@ -1374,7 +1474,7 @@ footer {
   }
 
   .other__img__sp {
-    height: 275px;
+    height: 273px;
   }
 
   .other {
@@ -1405,9 +1505,31 @@ footer {
     line-height: 1.3;
   }
 
+  .other__all {
+    margin: -17px 0 41px;
+  }
+
+  .all__h2 {
+    padding-bottom: 30px;
+    padding-top: 104px;
+  }
+
+  .arrow__all {
+    width: 28px;
+  }
+
+  .btn__left {
+    margin-left: 24px;
+  }
+
+  .other__box__page {
+    margin-top: 0px;
+    padding: 22.5px 0 21.5px 0;
+  }
+
   footer {
     padding-top: 60px;
-    height: 421px;
+    height: 427px;
   }
 
   .footer__name p {
