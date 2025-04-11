@@ -298,8 +298,10 @@ img {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 450px;
-  margin-bottom: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hamburger__img {
@@ -403,6 +405,12 @@ img {
 .open .logo-img {
   margin-left: 50px;
   padding-top: 0px;
+}
+
+.hamburger__footer{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
 }
 
 .header__hamburger__item {
