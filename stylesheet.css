@@ -141,7 +141,7 @@ header {
 --------------------- */
 .movie {
   /* height: 83.1vh; */
-  height: 100vh;
+  height: auto;
   width: 93.85%;
   position: relative;
 }
@@ -149,7 +149,8 @@ header {
 .header__video {
   text-align: right;
   margin: 0 0 0 auto;
-  padding-top: 34px;
+  padding-top: 112px;
+  padding-bottom: 166px;
 }
 
 
