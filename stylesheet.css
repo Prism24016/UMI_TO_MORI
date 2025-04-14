@@ -37,7 +37,7 @@ a {
 
 a {
   text-decoration: none;
-  border-bottom: 2px solid #00463C;
+  border-bottom: 0.8px solid #00463C;
   padding-bottom: 3px;
 }
 
@@ -62,7 +62,7 @@ p {
   background-color: #00463C;
   border-radius: 50px;
   border-bottom: none;
-  border: 2px solid #00463C;
+  border: 0.8px solid #00463C;
   color: #DFEEDA;
   display: block;
   max-width: 304px;
@@ -196,7 +196,7 @@ header {
 .line::after {
   content: "";
   height: 20%;
-  border-right: 2px solid #9BCEBB;
+  border-right: 0.8px solid #9BCEBB;
   background-color: #9BCEBB;
   width: 1px;
   color: #9BCEBB;
@@ -420,7 +420,6 @@ img {
   justify-content: space-between;
 }
 
-.rooms__inner,
 .about,
 footer {
   background-color: #00463C;
@@ -473,7 +472,7 @@ footer {
 }
 
 .rooms__inner {
-  border-bottom: 2px solid #DFEEDA;
+  border-bottom: 0.8px solid #DFEEDA;
   justify-content: center;
   text-align: left;
   padding: 25.4px 0 26.5px;
@@ -515,7 +514,7 @@ footer {
 .rooms__btn {
   color: #DFEEDA;
   letter-spacing: -0.5px;
-  border-bottom: 2px solid #DFEEDA;
+  border-bottom: 0.8px solid #DFEEDA;
 }
 
 .rooms__arrow {
@@ -557,7 +556,7 @@ footer {
 }
 
 .information__box {
-  border-top: 2px solid #00463C;
+  border-top: 0.8px solid #00463C;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -579,7 +578,7 @@ footer {
 }
 
 .information__border {
-  border-bottom: 2px solid #00463C;
+  border-bottom: 0.8px solid #00463C;
   margin-bottom: 38px;
 }
 
@@ -621,7 +620,7 @@ footer {
 }
 
 .access__inner {
-  border-top: 2px solid #00463C;
+  border-top: 0.8px solid #00463C;
   justify-content: center;
   align-items: center;
   padding-top: 80px;
@@ -727,6 +726,8 @@ footer {
 
   .rooms__photos__item {
     width: calc(100vw / 2);
+    background-color: #DFEEDA;
+    color: #00463C;
   }
 }
 
@@ -762,7 +763,7 @@ footer {
 }
 
 .other__box {
-  border-top: 2px solid #00463C;
+  border-top: 0.8px solid #00463C;
   padding: 37.5px 0 34.5px 0;
   margin-top: 8px;
 }
@@ -876,11 +877,17 @@ footer {
 
 .rooms__photos__item>img {
   width: 100%;
-  /* height: 426px; */
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .rooms__text__page h3 {
   font-size: 22px;
+}
+
+.rooms__photos__box {
+  margin-bottom: 75px;
 }
 
 .rooms__arrow__wrap {
@@ -926,7 +933,7 @@ footer {
 }
 
 .other__box__page {
-  border-top: 2px solid #00463C;
+  border-top: 0.8px solid #00463C;
   padding: 37.5px 0 34.5px 0;
   margin-top: -2px;
 }
@@ -1022,7 +1029,7 @@ footer {
 }
 
 .google {
-  border-bottom: 2px solid #DFEEDA;
+  border-bottom: 0.8px solid #DFEEDA;
   padding-bottom: 3px;
 }
 
@@ -1049,7 +1056,7 @@ footer {
 }
 
 .google {
-  border-bottom: 2px solid #9BCEBB;
+  border-bottom: 0.8px solid #9BCEBB;
 }
 
 /* SP表示
@@ -1118,13 +1125,13 @@ footer {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    border-bottom: 2px solid #9BCEBB;
+    border-bottom: 0.8px solid #9BCEBB;
     justify-content: space-between;
     margin-bottom: 44px;
   }
 
   .header__list__sp dt {
-    border-top: 2px solid #9BCEBB;
+    border-top: 0.8px solid #9BCEBB;
     letter-spacing: 4.2px;
     width: 70%;
   }
@@ -1139,7 +1146,7 @@ footer {
 
   .header__list__sp dd {
     width: 30%;
-    border-top: 2px solid #9BCEBB;
+    border-top: 0.8px solid #9BCEBB;
     display: flex;
     justify-content: flex-end;
   }
@@ -1237,6 +1244,9 @@ footer {
     padding: 11px 0 4.2px 0;
   }
 
+  .rooms__photos__box {
+    margin-bottom: 0px;
+  }
 
   .rooms__img,
   .rooms__photos__img {
@@ -1252,7 +1262,7 @@ footer {
   .rooms__inner {
     background-color: #DFEEDA;
     color: #00463C;
-    border-top: 2px solid #00463C;
+    border-top: 0.8px solid #00463C;
     padding: 0 0 5px 0;
   }
 
@@ -1354,7 +1364,7 @@ footer {
     background-color: #00463C;
     border-radius: 50px;
     border-bottom: none;
-    border: 2px solid #00463C;
+    border: 0.8px solid #00463C;
     color: #DFEEDA;
     display: block;
     max-width: 230px;
