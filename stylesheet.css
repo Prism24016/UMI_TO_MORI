@@ -420,6 +420,7 @@ img {
   justify-content: space-between;
 }
 
+.rooms__inner,
 .about,
 footer {
   background-color: #00463C;
@@ -472,10 +473,15 @@ footer {
 }
 
 .rooms__inner {
-  border-bottom: 0.8px solid #00463C;
+  border-bottom: 0.8px solid #9BCEBB;
   justify-content: center;
   text-align: left;
   padding: 25.4px 0 26.5px;
+}
+
+.rooms__lower{
+  background-color: #DFEEDA;
+  color: #00463C;
 }
 
 .rooms__text {
@@ -1079,6 +1085,11 @@ footer {
     display: none;
   }
 
+  .center__sp {
+    margin: 0 auto;
+    text-align: center;
+  }
+
   .start__img {
     width: 168px;
   }
@@ -1091,7 +1102,7 @@ footer {
   .logo-img,
   .header__hamburger__menu img {
     width: 119.45px;
-    padding-top: 15px;
+    padding-top: 0px;
   }
 
   .header__list,
