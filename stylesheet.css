@@ -382,7 +382,7 @@ img {
 
 .open .header__hamburger {
   background-color: #00463C;
-  color: #9BCEBB;
+  color: #E3EFDE;
   flex-direction: column;
   height: 100vh;
   padding: 9px 0px;
@@ -479,11 +479,6 @@ footer {
   padding: 25.4px 0 26.5px;
 }
 
-.rooms__lower{
-  background-color: #DFEEDA;
-  color: #00463C;
-}
-
 .rooms__text {
   width: 315px;
   letter-spacing: 2px;
@@ -541,12 +536,17 @@ footer {
 }
 
 .glass {
-  height: 696px;
+  /* height: 696px; */
   background-image: url("../img/umitomori_HP_3.png");
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  /* transform: translateY(-102.162px); */
+  height: 100vh; /* 高さは必要に応じて調整 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
 }
 
 /*
@@ -719,9 +719,7 @@ footer {
     overflow: hidden;
   }
 
-  .rooms__photos__box__list {
-    animation: photos__box__list-left 350s infinite linear 0.5s both;
-  }
+
 
   .rooms__photos__box__list,
   .rooms__photos__inner__list {
@@ -736,25 +734,25 @@ footer {
     color: #00463C;
   }
 }
-
-@keyframes photos__box__list-left {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-100%);
-  }
+.rooms__photos__box__list {
+  display: flex;
+  overflow-x: auto;
+  /* 横スクロールを有効にする */
+  scroll-behavior: smooth; /* スクロールを滑らかに */
+  /* -webkit-overflow-scrolling: touch; スマホでの慣性スクロール */
+  /* gap: 0px; 画像間の余白（任意） */
+  padding: 10px 0;
 }
 
-@keyframes photos__box__list-rl {
-  from {
-    transform: translateX(100%);
-  }
+.rooms__photos__item {
+  flex: 0 0 auto; /* 折り返さず横に並べる */
+  /* width: 250px; 好みの幅に調整 */
+}
 
-  to {
-    transform: translateX(0);
-  }
+.rooms__photos__img {
+  /* width: 100%;
+  height: auto; */
+  display: block;
 }
 
 .photos__btn,
@@ -892,9 +890,9 @@ footer {
   font-size: 22px;
 }
 
-.rooms__photos__box {
+/* .rooms__photos__box {
   margin-bottom: 75px;
-}
+} */
 
 .rooms__arrow__wrap {
   display: flex;
@@ -1085,6 +1083,16 @@ footer {
     display: none;
   }
 
+  .scrolldown {
+    position: absolute;
+    right: 9.9%;
+    top: 74%;
+  }
+
+  .scrolldown::after {
+    background-color: #fff;
+  }
+
   .center__sp {
     margin: 0 auto;
     text-align: center;
@@ -1149,7 +1157,7 @@ footer {
 
   .header__list__sp dt a {
     display: inline-block;
-    padding: 14px 0 14px 23px;
+    padding: 15px 0 15px 23px;
     width: 100%;
     letter-spacing: 1.7px;
     font-size: 18px;
@@ -1169,6 +1177,9 @@ footer {
     text-align: right;
   }
 
+  .open .logo-img {
+    margin-left: 22px;
+  }
 
   .open .header__hamburger {
     padding: 0;
@@ -1330,9 +1341,10 @@ footer {
   }
 
   .rooms__text p {
-    padding-bottom: 0px;
+    padding-top: 20px;
     letter-spacing: 0.55px;
     line-height: 1.5;
+    padding-bottom: 5px;
   }
 
   .rooms__arrow {
