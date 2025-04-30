@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: P22;
+  src: url(http://umi-to-mori.local/wp-content/themes/inn/fonts/P22StickleyProCaption.otf);
+}
+
 body {
   font-size: 14px;
-  font-family: 'P22 Stickley Pro Caption', sans-serif;
+  font-family: 'P22', sans-serif;
   color: #00463C;
   background-color: #DFEEDA;
 }
@@ -143,7 +148,7 @@ header {
 .header__video {
   text-align: right;
   margin: 0 0 0 auto;
-  padding-top: 112px;
+  padding-top: 90px;
   padding-bottom: 166px;
   background-color: #00463C;
   color: #9BCEBB;
@@ -306,6 +311,10 @@ img {
 
 .header__hamburger {
   display: none;
+}
+
+.header.open .header__hamburger {
+  overflow-y: auto;
 }
 
 /* ハンバーガーメニュー
@@ -536,17 +545,12 @@ footer {
 }
 
 .glass {
-  /* height: 696px; */
-  background-image: url("../img/umitomori_HP_3.png");
-  background-attachment: fixed;
+  height: 696px;
+  background-image: url("../img/glass.png");
   background-size: cover;
   background-position: center;
-  height: 100vh; /* 高さは必要に応じて調整 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
+  background-attachment: fixed;
+  /* transform: translateY(-102.162px); */
 }
 
 /*
@@ -684,14 +688,14 @@ footer {
 }
 
 .photos__box__list {
-  animation: photos__box__list-left 350s infinite linear 0.5s both;
+  animation: photos__box__list-left 50s infinite linear 0.5s both;
 }
 
 .photos__box__list2 {
   position: absolute;
   top: 0;
   left: 0;
-  animation: photos__box__list-rl 350s infinite linear 0.5s both;
+  animation: photos__box__list-rl 50s infinite linear 0.5s both;
   display: flex;
   list-style: none;
   padding: 0;
@@ -719,7 +723,9 @@ footer {
     overflow: hidden;
   }
 
-
+  /* .rooms__photos__box__list {
+    animation: photos__box__list-left 350s infinite linear 0.5s both;
+  } */
 
   .rooms__photos__box__list,
   .rooms__photos__inner__list {
@@ -734,25 +740,29 @@ footer {
     color: #00463C;
   }
 }
-.rooms__photos__box__list {
-  display: flex;
-  overflow-x: auto;
-  /* 横スクロールを有効にする */
-  scroll-behavior: smooth; /* スクロールを滑らかに */
-  /* -webkit-overflow-scrolling: touch; スマホでの慣性スクロール */
-  /* gap: 0px; 画像間の余白（任意） */
-  padding: 10px 0;
+
+@keyframes photos__box__list-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
-.rooms__photos__item {
-  flex: 0 0 auto; /* 折り返さず横に並べる */
-  /* width: 250px; 好みの幅に調整 */
+@keyframes photos__box__list-rl {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
-.rooms__photos__img {
-  /* width: 100%;
-  height: auto; */
-  display: block;
+.rooms__map{
+  object-fit: contain;
 }
 
 .photos__btn,
@@ -881,18 +891,23 @@ footer {
 
 .rooms__photos__item>img {
   width: 100%;
-  height: 465px;
-  object-fit: cover;
-  object-position: center;
+  height: 520px;
+  /* object-fit: cover;
+  object-position: center; */
+}
+
+.rooms__photos__box {
+  overflow-x: auto;           /* 横スクロールを許可 */
+  scroll-snap-type: x mandatory;  /* スクロールをスナップさせる */
+}
+
+.rooms__photos__box__list {
+  overflow: hidden;
 }
 
 .rooms__text__page h3 {
   font-size: 22px;
 }
-
-/* .rooms__photos__box {
-  margin-bottom: 75px;
-} */
 
 .rooms__arrow__wrap {
   display: flex;
@@ -1083,6 +1098,15 @@ footer {
     display: none;
   }
 
+  .center__sp {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .start__img {
+    width: 168px;
+  }
+
   .scrolldown {
     position: absolute;
     right: 9.9%;
@@ -1091,15 +1115,6 @@ footer {
 
   .scrolldown::after {
     background-color: #fff;
-  }
-
-  .center__sp {
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .start__img {
-    width: 168px;
   }
 
   header {
@@ -1157,7 +1172,7 @@ footer {
 
   .header__list__sp dt a {
     display: inline-block;
-    padding: 15px 0 15px 23px;
+    padding: 14px 0 14px 23px;
     width: 100%;
     letter-spacing: 1.7px;
     font-size: 18px;
@@ -1177,9 +1192,6 @@ footer {
     text-align: right;
   }
 
-  .open .logo-img {
-    margin-left: 22px;
-  }
 
   .open .header__hamburger {
     padding: 0;
@@ -1196,6 +1208,7 @@ footer {
 
   .hamburger__footer {
     position: static;
+    padding-bottom: 20px;
   }
 
   .movie {
@@ -1247,6 +1260,7 @@ footer {
     display: none;
   }
 
+  
   .rooms__img {
     padding: 11.5px 0 10px;
   }
@@ -1268,6 +1282,7 @@ footer {
 
   .rooms__photos__box {
     margin-bottom: 0px;
+    flex-direction: column;
   }
 
   .rooms__img,
@@ -1295,10 +1310,6 @@ footer {
     align-items: center;
   }
 
-  .rooms__text {
-    padding: 0 0 0 25px;
-  }
-
   .rooms__text__width {
     padding: 23px 0 15px;
   }
@@ -1312,6 +1323,7 @@ footer {
 
   .rooms__text__width__center {
     text-align: center;
+    height: 87px;
   }
 
   .rooms__text h3 {
@@ -1341,10 +1353,9 @@ footer {
   }
 
   .rooms__text p {
-    padding-top: 20px;
+    padding-top: 41px;
     letter-spacing: 0.55px;
     line-height: 1.5;
-    padding-bottom: 5px;
   }
 
   .rooms__arrow {
